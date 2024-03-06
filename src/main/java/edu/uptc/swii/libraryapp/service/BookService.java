@@ -16,7 +16,15 @@ public class BookService {
     }
 
     public List<Book> searchFeatured() {
-        return bookRepository.findAll();
+        return bookRepository.buscarTodos();
+    }
+
+    public List<Book> searchByEditorial(int editorial) {
+        return bookRepository.searchByEditorial(editorial);
+    }
+
+    public List<Book> search(String search) {
+        return bookRepository.search(search);
     }
 
 }

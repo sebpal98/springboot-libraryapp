@@ -27,7 +27,9 @@
                         <div class="card-body">
                             <h5 th:text="${book.name}" class="card-title"></h5>
                             <p>
-                                <span th:href="${book.editorial.name}" class="badge bg-warning text-dark">warning</span>
+                                <a th:href="@{/books-by-editorial(editorialid=${book.editorial.id})}"
+                                    th:text="${book.editorial.name}"
+                                    class="badge bg-warning text-dark"
                             </p>
                             <p th:text="${book.description}" class="card-text"></p>
                             <a href="#" class="btn btn-primary">Ver Detalles</a>

@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import edu.uptc.swii.libraryapp.domain.Book;
 import edu.uptc.swii.libraryapp.service.BookService;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ListBookController {
@@ -22,6 +24,20 @@ public class ListBookController {
     public String showBookList(Model model) {
         List<Book> selectedbooks = bookService.searchFeatured();
         model.addAttribute("books", selectedbooks);
+        return "booklist";
+    }
+
+    @RequestMapping("/books-by-editorial")
+    public String listBooksByEditorial(int editorialId, Model model) {
+        List<Book> books = bookService.searchByEditorial(editorialId);
+        model.addAttribute("books", books);
+        return "booklist";
+    }
+
+    @RequestMapping("/search")
+    public String search(String consult, Model model) {
+        List<Book> books = bookService.search(consult);
+        model.addAttribute("books", books);
         return "booklist";
     }
 
