@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Book {
@@ -14,6 +15,8 @@ public class Book {
     private String name;
     private String description;
     private String imagenUrl;
+    @ManyToOne
+    private Editorial editorial;
 
     public String getName() {
         return name;
@@ -42,6 +45,14 @@ public class Book {
     @Override
     public String toString() {
         return "Book [name=" + name + ", description=" + description + ", imagenUrl=" + imagenUrl + "]";
+    }
+
+    public Editorial getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(Editorial editorial) {
+        this.editorial = editorial;
     }
 
 }

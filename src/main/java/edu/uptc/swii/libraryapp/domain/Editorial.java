@@ -12,7 +12,9 @@ public class Editorial {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
-    private String webSite;
+    // In JDBC the camelCase interpretation in databases is camel_case, so website
+    // is (webSite) but for this cases, to not change db is website
+    private String website;
 
     public Integer getId() {
         return id;
@@ -30,12 +32,12 @@ public class Editorial {
         this.name = name;
     }
 
-    public String getWebSite() {
-        return webSite;
+    public String getwebsite() {
+        return website;
     }
 
-    public void setWebSite(String webSite) {
-        this.webSite = webSite;
+    public void setwebsite(String website) {
+        this.website = website;
     }
 
 }
