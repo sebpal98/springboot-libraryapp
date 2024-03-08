@@ -27,4 +27,9 @@ public class BookService {
         return bookRepository.search(search);
     }
 
+    public void save(Book book) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'save'");
+    }
+
 }

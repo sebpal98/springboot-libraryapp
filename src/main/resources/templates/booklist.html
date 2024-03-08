@@ -21,6 +21,12 @@
         
         <div class="container mt-4 my-style-destacados">
             <div class="row">
+                <div class="col col-md-12 text-end mb-4">
+                    <a href="@{books/create}" class="btn btn-outline-succes"> Crear libro</a>
+                </div>
+            </div>
+
+            <div class="row">
                 <div th:each="book:${books}" class="col-md-3 mb-4">
                     <div class="card">
                         <img th:src="${book.imagenUrl}" class="card-img-top" alt="...">

@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import edu.uptc.swii.libraryapp.domain.Book;
 import edu.uptc.swii.libraryapp.service.BookService;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ListBookController {

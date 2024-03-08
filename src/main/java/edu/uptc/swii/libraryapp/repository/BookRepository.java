@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import edu.uptc.swii.libraryapp.domain.Book;
 
-public interface BookRepository extends JpaRepository<Book, Integer> {
+@Repository
+public interface BookRepository extends JpaRepository<Book, String> {
 
     @Query("from book b order by b.name")
     List<Book> buscarTodos();

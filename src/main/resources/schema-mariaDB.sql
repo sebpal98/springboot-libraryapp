@@ -8,7 +8,7 @@ create table book (
 );
 
 insert into
-    book (name, description, imagenUrl)
+    book (name, description, imagen_url)
 values
     (
         'El ritmo y la palabra o para una poética de la música salsa',
