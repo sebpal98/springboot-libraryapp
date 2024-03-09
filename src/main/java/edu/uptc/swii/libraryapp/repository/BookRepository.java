@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import edu.uptc.swii.libraryapp.domain.Book;
 
 @Repository
-public interface BookRepository extends JpaRepository<Book, String> {
+public interface BookRepository extends JpaRepository<Book, Integer> {
 
     @Query("from book b order by b.name")
     List<Book> buscarTodos();
